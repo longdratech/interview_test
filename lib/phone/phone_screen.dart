@@ -1,18 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:interviewtest/widget/card_info.dart';
+import 'package:interviewtest/widget/swipe_card_list.dart';
 
-class Phone extends StatelessWidget {
+class PhoneScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Stack(
       children: <Widget>[
         _backgroundColor(),
-        Padding(
-          padding: const EdgeInsets.symmetric(vertical: 100, horizontal: 10),
-          child: Center(
-            child: CardInfo(),
-          ),
-        )
+        ListCard(),
       ],
     );
   }
@@ -27,7 +23,7 @@ class Phone extends StatelessWidget {
           ),
         ),
         Expanded(
-          flex: 4,
+          flex: 3,
           child: Container(
             color: Color.fromRGBO(249, 249, 249, 1),
           ),
