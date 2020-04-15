@@ -1,5 +1,5 @@
 import 'package:interviewtest/bloc/location.dart';
-import 'package:interviewtest/bloc/name.dart';
+import 'package:interviewtest/model/name.dart';
 import 'package:interviewtest/bloc/picture.dart';
 import 'package:json_annotation/json_annotation.dart';
 

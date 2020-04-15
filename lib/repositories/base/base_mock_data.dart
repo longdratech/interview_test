@@ -18,7 +18,7 @@ abstract class MockBaseRepository<T >{
       [final List<String> args = const <String>[]]) async {
     return null;
   }
-  Future<List<TEntity>> loadFromFile<TEntity>(
+  Future<TEntity> loadFromFile<TEntity>(
       String path, TEntity Function(Map<String, dynamic>) mapper) async {
     var txt = await rootBundle.loadString(path);
     var jsonObj = json.decode(txt);

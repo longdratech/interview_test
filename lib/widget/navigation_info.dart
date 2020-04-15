@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:interviewtest/widget/address.dart';
+import 'package:interviewtest/widget/info_person.dart';
 
 class NavigationInfo extends StatefulWidget {
   NavigationInfo({this.address, this.phoneNumber, this.info});
@@ -24,6 +24,11 @@ class _MyStatefulWidgetState extends State<NavigationInfo> {
   void initState() {
     super.initState();
     _listIcon =[
+//      Icon(Icons.location_searching, color: color),
+//      Icon(Icons.calendar_today, color: color),
+//      Icon(Icons.map, color: color),
+//      Icon(Icons.phone, color: color),
+//      Icon(Icons.lock, color: color),
       Icons.location_searching,
       Icons.calendar_today,
       Icons.map,
@@ -35,7 +40,6 @@ class _MyStatefulWidgetState extends State<NavigationInfo> {
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
-      color = Colors.green;
     });
   }
 
@@ -68,8 +72,10 @@ class _MyStatefulWidgetState extends State<NavigationInfo> {
       children: <Widget>[
         for(int i = 0; i < 5; i++)
           IconButton(
-            icon: Icon(_listIcon[i], color: color),
-            onPressed: () => _onItemTapped(i),
+            icon: Icon(_listIcon[i], color: color,),
+            onPressed: () {
+              _onItemTapped(i);
+            },
           )
       ],
     );

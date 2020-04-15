@@ -1,15 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:interviewtest/widget/card_info.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:interviewtest/bloc/info_bloc.dart';
+import 'package:interviewtest/bloc/info_event.dart';
+import 'package:interviewtest/repositories/api_service.dart';
 import 'package:interviewtest/widget/swipe_card_list.dart';
 
 class PhoneScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: <Widget>[
-        _backgroundColor(),
-        ListCard(),
-      ],
+    return BlocProvider(
+      create: (context) => InfoBloc(repository: InfoRepository()),
+      child: Stack(
+        children: <Widget>[
+          _backgroundColor(),
+          ListCard(),
+        ],
+      ),
     );
   }
 

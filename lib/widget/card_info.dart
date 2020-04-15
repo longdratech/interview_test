@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:interviewtest/widget/tab_bar.dart';
+import 'package:interviewtest/widget/navigation_info.dart';
 
 class CardInfo extends StatelessWidget {
   CardInfo({this.index, this.urlImage, this.address, this.phoneNumber, this.info});
@@ -13,11 +13,7 @@ class CardInfo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: <Widget>[
-        _cardInfo(context)
-      ],
-    );
+    return _cardInfo(context);
   }
 
   Widget _cardInfo(context){
@@ -44,7 +40,7 @@ class CardInfo extends StatelessWidget {
                       color: const Color.fromRGBO(255, 255, 255, 1),
                       borderRadius: const BorderRadius.only(bottomRight:Radius.circular(10), bottomLeft: Radius.circular(10)),
                   ),
-                  child: CustomTabBar(),
+                  child: NavigationInfo(address: address, info: info, phoneNumber: phoneNumber),
                 ),
               )
             ],
@@ -80,3 +76,5 @@ class CardInfo extends StatelessWidget {
     );
   }
 }
+
+

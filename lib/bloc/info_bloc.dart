@@ -5,7 +5,7 @@ import 'package:interviewtest/bloc/info_state.dart';
 import 'package:interviewtest/repositories/api_service.dart';
 
 class InfoBloc extends Bloc<InfoEvent, InfoState> {
-  MockApiJson repository;
+  InfoRepository repository;
 
   InfoBloc({@required this.repository}) : assert(repository != null);
 
