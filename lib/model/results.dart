@@ -1,21 +1,21 @@
-import 'package:interviewtest/bloc/location.dart';
+import 'package:interviewtest/model/location.dart';
 import 'package:interviewtest/model/name.dart';
-import 'package:interviewtest/bloc/picture.dart';
+import 'package:interviewtest/model/picture.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'results.g.dart';
 
 @JsonSerializable()
-class Results {
+class ResultsModel {
   final String gender;
-  final Name name;
-  final Location location;
+  final NameModel name;
+  final LocationModel location;
   final String email;
-  final Picture picture;
+  final PictureModel picture;
 
-  Results({this.gender, this.name, this.location, this.email, this.picture});
+  ResultsModel({this.gender, this.name, this.location, this.email, this.picture});
 
-  factory Results.fromJson(Map<String, dynamic> json) => _$ResultsFromJson(json);
+  factory ResultsModel.fromJson(Map<String, dynamic> json) => _$ResultsModelFromJson(json);
 
-  Map<String, dynamic> toJson() => _$ResultsToJson(this);
+  Map<String, dynamic> toJson() => _$ResultsModelToJson(this);
 }

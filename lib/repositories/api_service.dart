@@ -1,19 +1,19 @@
 import 'dart:async' show Future;
 
-import 'package:interviewtest/bloc/info.dart';
+import 'package:interviewtest/model/info.dart';
 import 'package:interviewtest/repositories/base/base_mock_data.dart';
 
 ///TODO: Mock data from assets
 
 class InfoRepository extends MockBaseRepository{
 
-  Info caseCardModel;
+  InfoModel caseCardModel;
 
-  Future<Info> getListInfo() async {
-    return await loadFromFile<Info>("assets/json/info.json", convertJson);
+  Future<InfoModel> getListInfo() async {
+    return await loadFromFile<InfoModel>("assets/json/info.json", convertJson);
   }
 
-  Info convertJson(Map<String, dynamic> json){
-    return Info.fromJson(json);
+  InfoModel convertJson(Map<String, dynamic> json){
+    return InfoModel.fromJson(json);
   }
 }

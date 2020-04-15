@@ -4,12 +4,12 @@ import 'package:json_annotation/json_annotation.dart';
 part 'info.g.dart';
 
 @JsonSerializable()
-class Info {
-  final List<Results> results;
+class InfoModel {
+  final List<ResultsModel> results;
 
-  Info({this.results});
+  InfoModel({this.results});
 
-  factory Info.fromJson(Map<String, dynamic> json) => _$InfoFromJson(json);
+  factory InfoModel.fromJson(Map<String, dynamic> json) => _$InfoModelFromJson(json);
 
-  Map<String, dynamic> toJson() => _$InfoToJson(this);
+  Map<String, dynamic> toJson() => _$InfoModelToJson(this);
 }

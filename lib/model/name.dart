@@ -3,14 +3,14 @@ import 'package:json_annotation/json_annotation.dart';
 part 'name.g.dart';
 
 @JsonSerializable()
-class Name {
+class NameModel {
   final String title;
   final String first;
   final String last;
 
-  Name({this.title, this.first, this.last});
+  NameModel({this.title, this.first, this.last});
 
-  factory Name.fromJson(Map<String, dynamic> json) => _$NameFromJson(json);
+  factory NameModel.fromJson(Map<String, dynamic> json) => _$NameModelFromJson(json);
 
-  Map<String, dynamic> toJson() => _$NameToJson(this);
+  Map<String, dynamic> toJson() => _$NameModelToJson(this);
 }
