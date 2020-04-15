@@ -1,4 +1,4 @@
-import 'package:interviewtest/model/base_model/results.dart';
+import 'package:interviewtest/bloc/results.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'info.g.dart';

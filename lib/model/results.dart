@@ -1,6 +1,6 @@
-import 'package:interviewtest/model/base_model/location.dart';
-import 'package:interviewtest/model/base_model/name.dart';
-import 'package:interviewtest/model/base_model/picture.dart';
+import 'package:interviewtest/bloc/location.dart';
+import 'package:interviewtest/bloc/name.dart';
+import 'package:interviewtest/bloc/picture.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'results.g.dart';
