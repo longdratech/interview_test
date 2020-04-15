@@ -8,7 +8,7 @@ class CardInfo extends StatelessWidget {
   int index;
   final String urlImage;
   final String address;
-  final int phoneNumber;
+  final String phoneNumber;
   final String info;
 
   @override

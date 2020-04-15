@@ -19,6 +19,7 @@ ResultsModel _$ResultsModelFromJson(Map<String, dynamic> json) {
     picture: json['picture'] == null
         ? null
         : PictureModel.fromJson(json['picture'] as Map<String, dynamic>),
+    phoneNumber: json['phoneNumber'] as String,
   );
 }
 
@@ -29,4 +30,5 @@ Map<String, dynamic> _$ResultsModelToJson(ResultsModel instance) =>
       'location': instance.location,
       'email': instance.email,
       'picture': instance.picture,
+      'phoneNumber': instance.phoneNumber,
     };

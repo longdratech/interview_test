@@ -12,8 +12,9 @@ class ResultsModel {
   final LocationModel location;
   final String email;
   final PictureModel picture;
+  final String phoneNumber;
 
-  ResultsModel({this.gender, this.name, this.location, this.email, this.picture});
+  ResultsModel({this.gender, this.name, this.location, this.email, this.picture, this.phoneNumber});
 
   factory ResultsModel.fromJson(Map<String, dynamic> json) => _$ResultsModelFromJson(json);
 

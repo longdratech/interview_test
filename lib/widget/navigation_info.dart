@@ -5,7 +5,7 @@ class NavigationInfo extends StatefulWidget {
   NavigationInfo({this.address, this.phoneNumber, this.info});
 
   String address;
-  final int phoneNumber;
+  final String phoneNumber;
   final String info;
 
   @override
