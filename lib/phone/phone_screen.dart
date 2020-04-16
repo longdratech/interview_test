@@ -17,22 +17,24 @@ class PhoneScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) => InfoBloc(repository: infoRepository),
-      child: Stack(
-        children: <Widget>[
-          _backgroundColor(),
-          ListCard(),
-          Positioned(
-            top: 100,
-            right: 30,
-            child: GestureDetector(
-              child: Icon(Icons.favorite_border, color: Colors.red, size: 25),
-              onTap: () {
-                print("Click Icon");
-                Navigator.of(context).push(MaterialPageRoute(builder: ( context) => FavouriteScreen()));
-              },
+      child: Scaffold(
+        body: Stack(
+          children: <Widget>[
+            _backgroundColor(),
+            ListCard(),
+            Positioned(
+              top: 100,
+              right: 30,
+              child: GestureDetector(
+                child: Icon(Icons.favorite_border, color: Colors.red, size: 25),
+                onTap: () {
+                  print("Click Icon");
+                  Navigator.of(context).push(MaterialPageRoute(builder: ( context) => FavouriteScreen()));
+                },
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

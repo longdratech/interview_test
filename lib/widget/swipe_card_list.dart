@@ -137,12 +137,6 @@ List<String> name = [
             Scaffold.of(context).showSnackBar(
                 SnackBar(
                   content: Text('Liked'),
-                  action: SnackBarAction(
-                    label: 'Undo',
-                    onPressed: () {
-                      // Some code to undo the change.
-                    },
-                  ),
                 ),
             );
 
