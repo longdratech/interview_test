@@ -1,5 +1,6 @@
 import 'dart:async' show Future;
 
+import 'package:flutter/services.dart';
 import 'package:interviewtest/model/info.dart';
 import 'package:interviewtest/repositories/base/base_mock_data.dart';
 
@@ -10,6 +11,7 @@ class InfoRepository extends MockBaseRepository{
   InfoModel caseCardModel;
 
   Future<InfoModel> getListInfo() async {
+    print("in ra console $convertJson)}");
     return await loadFromFile<InfoModel>("assets/json/info.json", convertJson);
   }
 
