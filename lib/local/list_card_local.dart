@@ -4,7 +4,7 @@ import 'package:interviewtest/animation/swipe_card.dart';
 import 'package:interviewtest/bloc/info_bloc.dart';
 import 'package:interviewtest/bloc/info_event.dart';
 import 'package:interviewtest/local/database_helper.dart';
-import 'package:interviewtest/repositories/api_service.dart';
+import 'package:interviewtest/repositories/info_repository.dart';
 import 'package:interviewtest/widget/card_info.dart';
 
 class ListCardLocal extends StatefulWidget {

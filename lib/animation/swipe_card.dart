@@ -32,6 +32,7 @@ class SwipeCard extends StatefulWidget {
   SwipeCard(
       {@required CardBuilder cardBuilder,
         @required int totalNum,
+        BuildContext context,
         AmassOrientation orientation = AmassOrientation.BOTTOM,
         int stackNum = 3,
         int animDuration = 800,

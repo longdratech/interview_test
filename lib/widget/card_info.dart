@@ -3,13 +3,15 @@ import 'package:flutter/rendering.dart';
 import 'package:interviewtest/widget/navigation_info.dart';
 
 class CardInfo extends StatelessWidget {
-  CardInfo({this.index, this.urlImage, this.address, this.phoneNumber, this.info});
+  CardInfo({this.index, this.urlImage, this.address, this.phoneNumber, this.info, this.name, this.nat});
 
   int index;
   final String urlImage;
   final String address;
   final String phoneNumber;
   final String info;
+  final String name;
+  final String nat;
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +42,7 @@ class CardInfo extends StatelessWidget {
                       color: const Color.fromRGBO(255, 255, 255, 1),
                       borderRadius: const BorderRadius.only(bottomRight:Radius.circular(10), bottomLeft: Radius.circular(10)),
                   ),
-                  child: NavigationInfo(address: address, info: info, phoneNumber: phoneNumber),
+                  child: NavigationInfo(address: address, info: info, phoneNumber: phoneNumber, name: name, nat: nat),
                 ),
               )
             ],

@@ -2,11 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:interviewtest/widget/info_person.dart';
 
 class NavigationInfo extends StatefulWidget {
-  NavigationInfo({this.address, this.phoneNumber, this.info});
+  NavigationInfo({this.address, this.phoneNumber, this.info, this.name, this.nat});
 
-  String address;
+  final String address;
   final String phoneNumber;
   final String info;
+  final String name;
+  final String nat;
 
   @override
   _MyStatefulWidgetState createState() => _MyStatefulWidgetState();
@@ -52,10 +54,10 @@ class _MyStatefulWidgetState extends State<NavigationInfo> {
   Widget build(BuildContext context) {
     _widgetOptions = [
       InfoPerson(title: "My address is ",address: "${widget.address}"),
-      InfoPerson(title: "My phone is ",address: "${widget.phoneNumber}"),
+      InfoPerson(title: "My phone is ",address: "${widget.nat}"),
       InfoPerson(title: "My info is ",address: "${widget.info}"),
-      InfoPerson(title: "My image is ",address: "${widget.address}"),
-      InfoPerson(title: "My name is ",address: "${widget.address}"),
+      InfoPerson(title: "My image is ",address: "${widget.phoneNumber}"),
+      InfoPerson(title: "My name is ",address: "${widget.name}"),
     ];
 
     return Scaffold(

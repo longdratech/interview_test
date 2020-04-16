@@ -6,8 +6,9 @@ part 'info.g.dart';
 @JsonSerializable()
 class InfoModel {
   final List<ResultsModel> results;
+  final String info;
 
-  InfoModel({this.results});
+  InfoModel({this.results, this.info});
 
   factory InfoModel.fromJson(Map<String, dynamic> json) => _$InfoModelFromJson(json);
 

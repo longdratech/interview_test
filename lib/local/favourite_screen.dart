@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:interviewtest/bloc/info_bloc.dart';
-import 'package:interviewtest/repositories/api_service.dart';
+import 'package:interviewtest/repositories/info_repository.dart';
 
 import 'list_card_local.dart';
 
